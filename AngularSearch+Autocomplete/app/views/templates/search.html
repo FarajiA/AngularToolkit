@@ -1,0 +1,7 @@
+﻿
+<div style="margin-top:50px">
+    <input  ng-model="query" type="text" min="2" placeholder="Search" ng-change="autoComplete(query)"  />
+    <ul>
+        <li ng-repeat="name in newresults">{{name.name}}</li>
+    </ul>
+</div>

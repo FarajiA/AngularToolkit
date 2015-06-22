@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title>Demo Angular Search</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-controller="Demo">
+        <h1>Demo Button & Checkboxes</h1><br /><br />        
+        <label ng-repeat="country in countries">
+            <input type="radio" name="response" ng-model="$parent.radioselectedCountry" value="{{country.country}}" />
+            {{country.country}}
+        </label>
+        <br/><br/>
+        <div>
+           Radio selected Country: <strong>{{selectedCountry}}</strong>
+        </div><br /><br />
+        <label ng-repeat="country in countries">
+            <input type="checkbox" ng-checked="selection.indexOf(country.country) > -1" ng-click="toggleSelection(country.country)" value="{{country.country}}">            
+            {{country.country}}
+        </label><br /><br/>
+        <div>Checkbox selected Country: <div ng-repeat="selected in selection"><strong>{{selected}}</strong><br /></div></div>
+    </div>
+</body>
+</html>
